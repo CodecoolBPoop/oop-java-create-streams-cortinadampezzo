@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.List;
-import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
 public class Streams {
@@ -83,8 +82,9 @@ public class Streams {
          * HINT: You will need to create a new class for this.
          */
 
-        Supplier<Integer> fibSupp = new Fibonacci();
+        Fibonacci fibSupp = new Fibonacci();
         Stream<Integer> s6 = Stream.generate(fibSupp).limit(10);
+        System.out.print(fibSupp.firstNumber + " " + fibSupp.secondNumber + " ");
         s6.forEach(result -> System.out.print(result + " "));
 
     }
